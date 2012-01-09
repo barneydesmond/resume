@@ -1,0 +1,6 @@
+*.log
+*.aux
+*.ps
+*.dvi
+.*.swp
+barneydesmond_resume.pdf
