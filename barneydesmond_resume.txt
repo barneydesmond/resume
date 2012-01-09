@@ -1,0 +1,81 @@
+<!--  How I'd go about rendering this into plain text.
+      Very manual and very fiddly :/
+-->
+
+Barney Desmond                                  (mobile) +61-413-476-139
+                                                 barneydesmond@gmail.com
+                                                       Sydney, Australia
+
+Creatively pragmatic
+Analytical problem solving
+Fast learner
+
+
+EMPLOYMENT EXPERIENCE
+
+ o Anchor (web hosting provider)
+   Senior systems administrator                      April 2007 - Present
+
+    - Core tasks of system maintenance, responding to customer requests,
+      building and upgrading servers, datacentre work, etc.
+    - Developed automation tools to allow L1 support staff to safely and
+      efficiently perform L2 tasks
+    - Wrote and maintained a large number of heavily-used internal and
+      customer-facing articles covering guides, advice, etc.
+    - Upgraded internal monitoring systems to implement escalation of
+      alerts, sending of SMSes via a GSM connection
+    - Forensic analysis and reporting following security breaches
+    - Mentoring of new staff
+    - Developed processes for rapid virtualisation of existing physical servers
+    - Upgrade of core mail systems from Sendmail to Postfix
+    - PR writing
+ 
+ o Australian Customs Service
+   Immigration officer                        August 2005 - February 2007
+
+    - Passenger processing
+    - Providing legal compliance advice and assistance to the public
+    - PROTECTED security clearance
+
+ o University of New South Wales Library
+   Desktop support technician                   July 2005 - December 2005
+
+    - Face to face support for approximately 500 staff and student
+      workstations
+    - Large-scale automated rollout of new workstations
+    - Assisted in design and deployment of a new Active Directory
+      infrastructure
+
+
+EDUCATION:
+
+ o Bachelor of Science (Computer Science), 2006
+   University of New South Wales
+
+    - Focused on networking and security
+
+
+KEYWORDS
+
+ - Operating Systems: Linux (Debian and Redhat), Windows
+ - Languages: Lots of Python, shell, Perl, PHP, C, core unix utilities
+ - Databases: PostgreSQL, MySQL, some MSSQL
+ - Networking: architecture, routing, debugging, performance, VPN, IPv6,
+               firewalls
+ - Security: Policy, risk assessment, reporting, auditing, analysis,
+             best practice, crypto
+ - Automation: puppet, cfengine, automated OS installation
+ - Webapps: LAMP stack, nginx, WSGI, Rails, Tomcat
+ - People: professional, courteous, amicable, rational, level-headed
+
+
+PERSONAL INTERESTS
+
+Japan
+Photography
+Costuming
+Cryptography
+Imaging metadata
+Custom filesystem index
+Software translation and localisation
+

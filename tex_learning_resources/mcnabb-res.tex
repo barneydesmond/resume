@@ -1,0 +1,178 @@
+% Andrew McNabb's Resume
+% Created: 7 Jan 2004
+% Last Modified: 17 Jul 2004
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Andrew McNabb}
+\newcommand{\addr}{123 Main St., Springfield, AA 12345}
+\newcommand{\phone}{(123) 456-7890}
+\newcommand{\email}{aaaaaaa@aaaaa.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+	\begin{ressubsec}{Brigham Young University}{Provo, UT}{Majoring in Computer Science and in Mathematics}
+		\ressubitem{GPA: 3.77 (overall), 3.77 (CS major), 3.90 (Math major)}
+		\ressubitem{Projected Graduation Date: May, 2006}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Experience}
+
+	\begin{ressubsec}{BYU Computer Science Department}{Provo, UT}{System Programmer: June 2003--present}
+		\ressubitem{Manage 200 Linux and 150 Windows 2000 lab workstations.}
+		\ressubitem{Maintain department Linux servers and document their configuration.}
+		\ressubitem{Develop tools and scripts to improve reliability and functionality of the network.}
+		\ressubitem{Assist users with problems and write tutorials and documentation.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Argus Systems Group, Inc.}{Champaign, IL}{System Administrator: March, 1997--August, 2000}
+		\ressubitem{Configured servers, maintained inventory, and managed tape backup system.}
+		\ressubitem{Prepared all product distribution media (including bootable CDs).}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+	\resitem{\textbf{Operating Systems:} Linux (Gentoo, Red Hat, and Debian), Mac OS 9 and X, UNIX (several variants), Windows 98/2000/XP}
+
+	\begin{reslist}{Computer Languages:}
+
+		\ressubitem{Proficient in C, C++, HTML, Java, \LaTeX, PHP, UNIX Shells}
+
+		\ressubitem{Familiar with Perl, SQL}
+
+	\end{reslist}
+
+	\begin{reslist}{Tools and Systems:}
+
+		\ressubitem{Proficient in Apache, BIND, CVS/RCS, Make, GnuPG, SSHD, VI}
+
+		\ressubitem{Familiar with Kerberos, MySQL, NFS, OpenLDAP, OpenSSL, Postfix, Samba}
+
+	\end{reslist}
+
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Achievements and Activities}
+
+	\resitem{Served a voluntary two-year mission in Serbia and Bulgaria (2001--2003).  Speak fluent Serbian and basic Bulgarian.}
+
+	\resitem{As a member and president of the BYU Unix Users Group, assist new Linux users and participate in presentations and discussions on advanced topics (2003--present).}
+
+	\resitem{Manage a heterogeneous home network and family server (1996--present).}
+
+	\resitem{Received a National Merit Scholarship.}
+
+	\resitem{Co-authored ``Interacting Quantitative Trait Loci Control Phenotypic Variation in Murine Estradiol-Regulated Responses,'' \textit{Endocrinology} 140 no. 2 (1999).}
+
+	\resitem{Awarded Eagle Scout Rank, Boy Scouts of America (1996).}
+
+
+\end{ressection}
+
+
+\end{document}
