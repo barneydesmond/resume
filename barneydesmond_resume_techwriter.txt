@@ -1,0 +1,86 @@
+<!--  This is the draft for making the resume in LaTeX.
+      It will be messy.
+-->
+
+Barney Desmond                                  (mobile) +61-413-476-139
+                                                 barneydesmond@gmail.com
+                                                       Sydney, Australia
+
+A Linux sysadmin turned technical writer, I'm a hacker at heart who loves
+teaching people new things. I pull things apart, I learn about them,
+I understand then. Then I write about them.
+
+
+EMPLOYMENT EXPERIENCE
+
+ o Anchor (web hosting provider)
+   Technical writer                               November 2011 - Present
+
+    - Wrote and edited thousands of pages of documentation for the company's
+      internal wiki, supporting every facet of the business.
+    - Over 200 articles published on the company blog, most technical, written
+      to a specific audience.
+    - Undertook initiatives to track and grow readership of the blog, using
+      scientific experiments and analysis to drive towards 10,000 hits/month.
+    - Created diagrams and videos to support and enhance the documentation
+      as appropriate.
+    - Writing and proofreading of various marketing materials as needed,
+      including flyers, posters, website copy, case studies and press releases.
+
+   Senior systems administrator                April 2007 - November 2011
+
+    - Core tasks of system maintenance, responding to customer requests,
+      building and upgrading servers, datacentre work, etc.
+    - Developed automation tools to allow L1 support staff to safely and
+      efficiently perform L2 tasks
+    - Upgraded internal monitoring systems to implement escalation of
+      alerts, sending of SMSes via a GSM connection
+    - Forensic analysis and reporting following security breaches
+    - Mentoring of new staff
+    - Developed processes for rapid virtualisation of existing physical servers
+    - Upgrade of core mail systems from Sendmail to Postfix
+ 
+ o Australian Customs Service
+   Immigration officer                        August 2005 - February 2007
+
+    - Passenger processing
+    - Providing legal compliance advice and assistance to the public
+    - PROTECTED security clearance
+
+ o University of New South Wales Library
+   Desktop support technician                   July 2005 - December 2005
+
+    - Face to face support for approximately 500 workstations
+    - Large-scale automated deployment of new workstations
+    - Assisted in design and rollout of new Active Directory infrastructure
+
+
+EDUCATION:
+
+ o Bachelor of Science (Computer Science), 2006
+   University of New South Wales
+
+
+KEYWORDS
+
+ - Operating Systems: Linux (Debian and Redhat), Windows
+ - Languages: Lots of Python, shell, Perl, PHP, C, core unix utilities
+ - Databases: PostgreSQL, MySQL, some MSSQL
+ - Networking: architecture, routing, debugging, performance, VPN, IPv6,
+               firewalls
+ - Security: Policy, risk assessment, reporting, auditing, analysis,
+             best practice, crypto
+ - Automation: puppet, cfengine, automated OS installation
+ - Webapps: LAMP stack, nginx, WSGI, Rails, Tomcat
+ - People: professional, courteous, amicable, rational, level-headed
+
+
+PERSONAL INTERESTS
+
+Japan
+Photography
+Costuming
+Cryptography
+Imaging metadata
+Software translation and localisation
+
