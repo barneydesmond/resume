@@ -1,4 +1,5 @@
 <DRAFT>
+http://www.atlassian.com/company/careers/jobs/listing?org=ATLASSIAN&cws=1&rid=750
 
 
 Hi/G'day,
@@ -31,6 +32,8 @@ it's vision and culture, and that's where I want to be.
 Outline the fact that I've only been doing tech writing for 1.5 years, not 3,
 but my hardcore technical experience should more than cover for that, along
 with my strong communication skills, and my ability to learn really fast.
+
+Addressing some of the Key Skills is probably good here, just a few.
 
 Carp on some more about how I'll be good at the job, and thank them for their
 consideration, and sign off.
