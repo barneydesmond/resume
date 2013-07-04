@@ -4,3 +4,11 @@ Where better to keep it, eh?
 
 It's written in TeX.
 
+----
+
+On my Debian squeeze system, I needed to install the following packages
+to get a successful PDF build:
+
+* texlive-latex-base
+* texlive-latex-extra
+
