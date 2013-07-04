@@ -1,0 +1,38 @@
+<DRAFT>
+
+
+Hi/G'day,
+
+A former coworker of mine at Anchor and current sysadmin at Atlassian, Paul
+DeAudney, mentioned that a vacancy recently opened up for a Technical Writer
+in Sydney.
+
+I am your new Technical Writer.
+
+Anchor, much like Atlassian, firmly believes in smart people building and
+doing amazing things. I'm proud to have been part of a team that's been doing
+just that for the past six years, but now I feel I'm ready for a change.
+
+I'm ready for new challenges and to do new things, and Atlassian is where I
+want to be.
+
+<Is this shit getting too waffly?>
+
+
+<BEGIN: ALTERNATIVE TO THE LAST TWO PARAGRAPHS>
+
+I've been part of the amazing team at Anchor for the past six years, and now
+I feel it's time for a change. I greatly admire Atlassian as a company, for
+it's vision and culture, and that's where I want to be.
+
+<END:   ALTERNATIVE TO THE LAST TWO PARAGRAPHS>
+
+
+Outline the fact that I've only been doing tech writing for 1.5 years, not 3,
+but my hardcore technical experience should more than cover for that, along
+with my strong communication skills, and my ability to learn really fast.
+
+Carp on some more about how I'll be good at the job, and thank them for their
+consideration, and sign off.
+
+
