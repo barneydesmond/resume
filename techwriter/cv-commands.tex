@@ -1,0 +1,63 @@
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{simplemargins}
+\usepackage{graphicx}
+\setleftmargin{2.0cm}
+\setrightmargin{3.0cm}
+\settopmargin{2.5cm}
+\setbottommargin{0cm}
+%\renewcommand\familydefault{\sfdefault}
+
+
+% starting commands
+\newfont{\myfonta}{cmr10 at 9pt}
+\newfont{\myfontb}{cmr10 at 10pt}
+\newfont{\myfontc}{cmr10 at 15pt}
+\newfont{\myfontd}{cmr10 at 12pt}
+
+\newcommand{\largeskip}[0]{\vspace{2.5mm}\\}
+\newcommand{\shortskip}[0]{\vspace{1.2mm}\\}
+
+% small caps
+\newcommand{\smcp}[1]{\sc{\myfontb{#1}}}
+\renewcommand{\textsc}[1]{\smcp{#1}}
+
+\newcommand{\header}[2]{
+\hspace{0cm}
+\begin{tabular}{p{10cm}p{6cm}}
+{\raggedright {\headline {#1}}
+}
+& 
+\raggedleft{#2}
+\end{tabular}}
+
+
+\newcommand{\blocktitle}[1]{
+\parbox{\textwidth}{
+	\vspace{3mm}
+	\noindent
+	\textcolor{MidnightBlue}{
+{\myfontd {#1}
+	\vspace*{2mm}
+	\hrule}
+	\vspace*{4mm}
+	\noindent
+} } }
+
+\newcommand{\headline}[1]{{\myfontc{#1}}}
+\newcommand{\setmainfont}[0]{\myfontb}
+
+%%%%%%
+
+\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{tabular}{p{4cm}p{12cm}}}{\end{tabular}}
+\newcommand{\resumeitem}[2]{\noindent\raggedright{\textsc{#1}} & #2}
+
+%%%%%%
+
+\newenvironment{interestsblock}[1]{\blocktitle{#1}\begin{tabular}{p{8cm}p{10cm}}}{\end{tabular}}
+\newcommand{\interest}[1]{#1}
+
+%%%%%%
+
+\setlength{\parindent}{0mm}
+\pagestyle{empty}
+
