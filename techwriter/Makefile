@@ -4,6 +4,7 @@ all: $(TARGET)
 
 %.pdf: %.ps
 	ps2pdf14 $<
+	cp -a $@ /home/furinkan/public_html/j.furinkan.meidokon.net/
 
 %.ps: %.dvi
 	dvips -Ppdf -G0 $< -o $@
