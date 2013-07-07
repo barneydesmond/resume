@@ -1,9 +1,12 @@
 \usepackage[dvipsnames,usenames]{color}
 \usepackage{simplemargins}
 \usepackage{graphicx}
+\setlength{\smpagewidth}{210mm}
+\setlength{\smpageheight}{297mm}
+
 \setleftmargin{2.0cm}
-\setrightmargin{3.0cm}
-\settopmargin{2.5cm}
+\setrightmargin{2.7cm}
+\settopmargin{2.0cm}
 \setbottommargin{0cm}
 %\renewcommand\familydefault{\sfdefault}
 
@@ -14,8 +17,9 @@
 \newfont{\myfontc}{cmr10 at 15pt}
 \newfont{\myfontd}{cmr10 at 12pt}
 
-\newcommand{\largeskip}[0]{\vspace{2.5mm}\\}
-\newcommand{\shortskip}[0]{\vspace{1.2mm}\\}
+\newcommand{\largeskip}[0]{\vspace{1.2mm}\\}
+\newcommand{\shortskip}[0]{\vspace{0.8mm}\\}
+\newcommand{\tinyskip}[0]{\vspace{0.1mm}\\}
 
 % small caps
 \newcommand{\smcp}[1]{\sc{\myfontb{#1}}}
@@ -48,7 +52,8 @@
 
 %%%%%%
 
-\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{tabular}{p{4cm}p{12cm}}}{\end{tabular}}
+\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{tabular}{p{12cm}p{4cm}}}{\end{tabular}}
+\newenvironment{howiwork}[1]{\blocktitle{#1}\begin{tabular}{p{4cm}p{12cm}}}{\end{tabular}}
 \newcommand{\resumeitem}[2]{\noindent\raggedright{\textsc{#1}} & #2}
 
 %%%%%%
