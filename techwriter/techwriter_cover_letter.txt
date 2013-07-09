@@ -1,54 +1,31 @@
-<DRAFT>
 http://www.atlassian.com/company/careers/jobs/listing?org=ATLASSIAN&cws=1&rid=750
 
 
 Good day,
 
 A former coworker of mine at Anchor and now sysadmin at Atlassian, Paul
-De Audney, mentioned that a vacancy recently opened up for a Technical Writer
-in Sydney.
+De Audney, mentioned that a vacancy recently opened up for a Technical
+Writer in Sydney.
 
 I am your new Technical Writer.
 
-I've been part of an amazing team at Anchor for the past six years, and now
-I feel it's time for a change. I greatly admire Atlassian as a company, for
-it's vision and culture, and that is where I want to be.
+I have been part of an amazing team at Anchor for the past six years, and
+now I feel it's time for a change. I greatly admire Atlassian as a company,
+for its vision and culture, and that is where I want to be.
+
+Technical writing is a relatively recent endeavour for me, a large part of
+my work to date has been as a linux sysadmin. My hands-on experience with
+systems and software development practices was a great asset when I moved
+into technical writing, and I believe this makes me ideally suited for the
+role at Atlassian. I know the products that I'll be dealing with at
+Atlassian, and I'm going to hit the ground running.
+
+In short: I love writing documentation, and I'm excited about the prospect
+of working for Atlassian. I hope to hear from you shortly.
 
 
-----
+Sincerely,
 
-Akira sez:
- * lose the contractions, too many of them
- * go with formality and professionalism - I'll keep it a bit drier
-
-----
-
-Anchor, much like Atlassian, firmly believes in smart people building and
-doing amazing things. I'm proud to have been part of a team that's been doing
-just that for the past six years, but now I feel I'm ready for a change.
-
-I'm ready for new challenges and to do new things, and Atlassian is where I
-want to be.
-
-<Is this shit getting too waffly?>
-
-
-<BEGIN: ALTERNATIVE TO THE LAST TWO PARAGRAPHS>
-
-I've been part of the amazing team at Anchor for the past six years, and now
-I feel it's time for a change. I greatly admire Atlassian as a company, for
-it's vision and culture, and that's where I want to be.
-
-<END:   ALTERNATIVE TO THE LAST TWO PARAGRAPHS>
-
-
-Outline the fact that I've only been doing tech writing for 1.5 years, not 3,
-but my hardcore technical experience should more than cover for that, along
-with my strong communication skills, and my ability to learn really fast.
-
-Addressing some of the Key Skills is probably good here, just a few.
-
-Carp on some more about how I'll be good at the job, and thank them for their
-consideration, and sign off.
+Barney Desmond
 
 
