@@ -14,3 +14,4 @@ all: $(TARGET)
 clean:
 	rm -f *.log *.aux $(TARGET) *.ps *.dvi
 
+.PHONY: push clean
