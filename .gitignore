@@ -3,4 +3,5 @@
 *.ps
 *.dvi
 .*.swp
+.DS_Store
 barneydesmond_resume.pdf
