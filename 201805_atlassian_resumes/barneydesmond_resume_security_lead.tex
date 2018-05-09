@@ -38,10 +38,11 @@ Sydney, Australia}
 \multicolumn{2}{p{16cm}}{
 \setstretch{1.2}
 I have 12+ years of professional experience as a Linux sysadmin, solving
-difficult problems and making things work in fast-paced environments. More
-recently I've shifted to supporting \emph{products} rather than infrastructure,
-taking ownership and applying my experience to ensure the reliability and
-security of systems.
+difficult problems, finding ways to do things better, and teaching people. I
+come with a pragmatic and rigorous approach to security, knowing that it's as
+much of a cultural challenge as it is a technical one. I'm not a developer but
+I'm well versed in current practices and workflows, Python is my go-to when
+code needs writing.
 }
 \hugeskip
 \end{resumeblock}
@@ -62,10 +63,10 @@ security of systems.
 % Remote access with staff account fro overseas, flagging odd activity in Splunk
 \item Post-incident analysis to inform our response to security incidents.
 % Literally EVERYTHING I was doing, provisioning, config changes, etc.
-\item Automated many common processes to reduce human error and improve service turnaround.
+\item Automated many common processes to reduce human error and improve request turnaround.
 % My protopages section in the wiki, how stuff works, what connects to what, how monitoring autoprov works
 \item Wrote processes and documentation so I could educate new coworkers on internal assumed knowledge.
-% Huge DCR project, analysing existing services so they could be lifted while maintaing same functionality
+% Huge DCR project, analysing existing services so they could be lifted while maintaining same functionality
 \item Planned migration or replacement of legacy systems, switching cfengine to Puppet for management.
 \end{itemize}
 }
@@ -75,10 +76,16 @@ security of systems.
 \multicolumn{2}{p{15.6cm}}{
 \myfonta
 \begin{itemize}[topsep=1mm,itemsep=0.3mm,parsep=1.2mm]
+% Best described as broad-reaching jack of all trades work
 \item Worked as part of an internal team on tooling and efficiency measures to support frontline sysadmins.
+% Can talk the talk for all of these, can't walk the walk for Ruby and Haskell though
 \item Languages and tools were chosen for their suitability to the task. This broadly included Python, Ruby and Haskell for app code, and Postgres, Redis, Elasticsearch, and Ceph for the backend technologies.
+% Would love to get it running in AWS, that'd be cool, it'd scale nicely I think
 \item Wrote \emph{UMAD}, a knowledge search engine spanning disparate sources of information, including our wiki, support ticketing system, domain registrations, and CRM.
+% Closest thing to dev work, mostly about practices and teamwork. Only dev'd for small bits
 \item \emph{Vaultaire} and associated microservices, a time-series database for large-scale storage of monitoring metrics, built on top of the Ceph datastore.
+\item Maintained \emph{libmarquise}, a supporting C library for components of Vaultaire.
+% CI/CD type stuff, lots of time grappling with Openstack though >:
 \item Internal software was deployed using \emph{Docker} containers, onto our in-house \emph{Openstack} cluster.
 \item \emph{Jenkins} and \emph{Travis} CI for packaging and deployment to private repos, in addition to comprehensive testing.
 \end{itemize}
@@ -91,9 +98,8 @@ security of systems.
 \begin{itemize}[topsep=1mm,itemsep=0.3mm,parsep=1.2mm]
 \item Wrote and edited thousands of pages of internal procedures, guides, and documentation, supporting every facet of the business, targeted for different audiences as required.
 \item Managed deadlines presented by multiple teams, ensuring documentation was consistently delivered on-time.
-\item Published 200+ articles on the blog, written to a specifically tech-savvy audience, to entertain and enlighten.
+\item Published 200+ articles on the blog, written to a specifically tech-savvy audience, to entertain and enlighten. Topics as diverse as performance, security, networking, new products, deep dive kernel debugging.
 \item Developed all new training modules for new staff to get them up to speed and productive as soon as possible.
-\item Initiated and maintained a new public-facing knowledgebase for customers.
 \end{itemize}
 }
 \tinyskip
@@ -105,7 +111,6 @@ security of systems.
 \item Upgraded internal monitoring systems to implement escalation of alerts.
 \item Introduced Puppet for automation of customer server builds, replacing cfengine.
 \item Mentored new staff, working closely to get them settled in and up to speed.
-\item Forensic analysis and reporting following security breaches.
 \item Developed processes for rapid virtualisation of physical servers, helping reduce operating costs.
 \end{itemize}
 }
@@ -127,22 +132,22 @@ security of systems.
 \resumeitem{Languages}{Heavy use of Python, shell, Perl, PHP, C, some Ruby and Java, Haskell}
 \hugeplusskip
 
-\resumeitem{Development}{Git (standalone, Github, Bitbucket), svn, development methodologies, testing regimes, deployment best practices with CI/CD, packaging in RPM and DEB formats, containerisation, debugging tools}
+\resumeitem{Development}{Git (Bitbucket, Github, standalone), svn, development methodologies, testing regimes, deployment best practices with CI/CD, packaging in RPM and DEB formats, containerisation, debugging tools}
+\hugeplusskip
+
+\resumeitem{Security}{Policy, risk assessment, reporting, auditing, analysis and testing, best practices, strong interest in cryptography}
+\hugeplusskip
+
+\resumeitem{Automation}{Ansible, Puppet, automated OS installation with tools such as Kickstart and d-i, scripting with core unix utilities, etc.}
+\hugeplusskip
+
+\resumeitem{Cloud services}{Amazon AWS, automation with Terraform and Python code. Docker containers and tooling. Some exposure to Azure and Openshift/Openstack}
 \hugeplusskip
 
 \resumeitem{Networking}{Architecture and design, capacity planning, addressing and subnetting, routing and associated protocols, high availability, debugging, performance, IPsec and OpenVPN, IPv6, firewalls}
 \hugeplusskip
 
-\resumeitem{Hardware}{I have plenty of hands-on datacentre experience and am thoroughly familiar with the realities of how systems are built in practice}
-\hugeplusskip
-
 \resumeitem{Databases}{PostgreSQL (with replication), MySQL, SQLite, Redis}
-\hugeplusskip
-
-\resumeitem{Security}{Policy, risk assessment, reporting, auditing, analysis, best practice, cryptography}
-\hugeplusskip
-
-\resumeitem{Automation}{Ansible, Puppet, automated OS installation with tools such as Kickstart and d-i, scripting with core unix utilities, etc.}
 \hugeplusskip
 
 \resumeitem{Webapps}{Common LAMP stack, nginx, WSGI, Rails via Thin/Unicorn/Passenger, Tomcat}
@@ -151,7 +156,10 @@ security of systems.
 \resumeitem{Scalability \& clustering}{HAproxy, Corosync and Pacemaker, DRBD}
 \hugeplusskip
 
-\resumeitem{People}{I am first and foremost a good listener. I communicate clearly and effectively in any medium, and can explain complex concepts to others regardless of their level of familiarity.}
+\resumeitem{Hardware}{I have plenty of hands-on datacentre experience and am thoroughly familiar with the realities of how systems are built in practice}
+\hugeplusskip
+
+\resumeitem{Wetware}{I am first and foremost a good listener. I communicate clearly and effectively in any medium, and can explain complex concepts to others regardless of their level of familiarity.}
 \hugeplusskip
 
 \end{skillz}
