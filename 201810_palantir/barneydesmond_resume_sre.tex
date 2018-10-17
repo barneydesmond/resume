@@ -1,0 +1,171 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{enumitem}
+
+\include{cv-commands}
+
+\begin{document}
+
+\setmainfont
+
+\header
+{Barney Desmond}
+{+61-413-476-139 (mobile)\\
+barneydesmond@gmail.com\\
+Sydney, Australia}
+
+% SRE role: https://jobs.lever.co/palantir/da5b54d1-8673-479b-9091-36f71d752ccb
+
+% Outline
+% * Ops and uptime
+% * Designing new systems for deployments
+% * Administering and troubleshooting
+% * Maintaining DBs
+%
+% Bottom line: Keep things running, make them better and more reliable.
+
+% Requirements
+% * Linux
+% * Scripting in Bash/Python/Ruby/Perl
+% * Monitoring and Nagios
+% * TCP/IP networking
+% * Managing DBs or search engines, Postgres, MySQL, Oracle, Cassandra or ElasticSearch
+% * Work independent
+% * On-call rotation
+% * OpSec and best practices
+
+% Preferred
+% * BSc/MS in Comp Sci
+% * Virtualization using VMWare ESX, KVM, Xen, or Docker
+% * Puppet or Chef
+% * Server hardware and/or AWS
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{resumeblock}{Ten-Second Summary}
+\multicolumn{2}{p{16cm}}{
+\setstretch{1.2}
+I have over a decade of experience designing and running Linux systems.  I'm
+used to solving difficult problems, and I take a rigorous and structured
+approach to ensure the job is done properly. My background is in managing the
+full stack for web-facing applications, but my interests are much broader and I
+quickly pick up new skills as needed.
+}
+\hugeskip
+\end{resumeblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{resumeblock}{Employment experience}
+
+\textbf{Enterprise Linux administrator} -- NSW Dept. of Education & \hspace{3mm}Aug 2015 -- Present \\
+\multicolumn{2}{p{15.6cm}}{
+\myfonta
+\begin{itemize}[topsep=1mm,itemsep=0.3mm,parsep=1.2mm]
+\item Worked with other teams to adapt existing systems and design new ones for our hybrid Openshift/AWS environment.
+\item Scripted and automated common rollout procedures to reduce errors, and improve efficiency and reporting.
+\item Wrote and improved large amounts of documentation and processes to bring them to an auditable standard.
+\item Automated RPM packaging for software developed in-house, deployed to servers via RedHat Satellite.
+\item Setup automated patching for 1000+ RHEL hosts, reducing hands-on effort by an order of magnitude.
+\item Post-mortem forensic analysis to inform our response to security incidents.
+\item Wrote onboarding docs for new staff members, reducing the time needed for face-to-face training.
+\end{itemize}
+}
+\tinyskip
+
+\textbf{R\&D Engineer} -- Anchor & \hspace{3mm}Aug 2013 -- Aug 2015 \\
+\multicolumn{2}{p{15.6cm}}{
+\myfonta
+\begin{itemize}[topsep=1mm,itemsep=0.3mm,parsep=1.2mm]
+\item Worked as part of an internal team on tooling and efficiency measures to support frontline sysadmins.
+\item Languages and tools were chosen for their suitability to the task. This broadly included Python, Ruby and Haskell for app code, and Postgres, Redis, Elasticsearch, and Ceph for the backend technologies.
+\item Wrote \emph{UMAD}, a knowledge search engine spanning disparate sources of information, including our wiki, support ticketing system, domain registrations, and CRM.
+\item \emph{Vaultaire} and associated microservices, a time-series database for large-scale storage of monitoring metrics, built on top of the Ceph datastore.
+\item Internal software was deployed using \emph{Docker} containers, onto our in-house \emph{Openstack} cluster.
+\item \emph{Jenkins} and \emph{Travis} CI for packaging and deployment to private repos, in addition to comprehensive testing.
+\end{itemize}
+}
+\tinyskip
+
+\textbf{Technical writer} -- Anchor & Nov 2011 -- Aug 2013 \\
+\multicolumn{2}{p{15.6cm}}{
+\myfonta
+\begin{itemize}[topsep=1mm,itemsep=0.3mm,parsep=1.2mm]
+\item Wrote and edited thousands of pages of internal procedures, guides, and documentation, supporting every facet of the business, targeted for different audiences as required.
+\item Managed deadlines presented by multiple teams, ensuring documentation was consistently delivered on-time.
+\item Published 200+ articles on the blog, written to a specifically tech-savvy audience, to entertain and enlighten.
+\item Developed all new training modules for new staff to get them up to speed and productive as soon as possible.
+\item Initiated and maintained a new public-facing knowledgebase for customers.
+\end{itemize}
+}
+\tinyskip
+
+\textbf{Senior Linux sysadmin} -- Anchor & Apr 2007 -- Nov 2011 \\
+\multicolumn{2}{p{15.6cm}}{
+\myfonta
+\begin{itemize}[topsep=1mm,itemsep=0.3mm,parsep=1.2mm]
+\item Upgraded internal monitoring systems to implement escalation of alerts.
+\item Introduced Puppet for automation of customer server builds, replacing cfengine.
+\item Mentored new staff, working closely to get them settled in and up to speed.
+\item Forensic analysis and reporting following security breaches.
+\item Developed processes for rapid virtualisation of physical servers, helping reduce operating costs.
+\end{itemize}
+}
+
+\end{resumeblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%\newpage
+
+
+
+\begin{skillz}{Knowledge and experience}
+
+\resumeitem{Operating Systems}{Extensive Linux background, primarily Redhat (RHEL and Fedora) and Debian. Exposure to Windows 7/8/10, Server 2008 and 2012, some OS X}
+\hugeplusskip
+
+\resumeitem{Languages}{Heavy use of Python, shell, Perl, PHP, C, some Ruby and Java, Haskell}
+\hugeplusskip
+
+\resumeitem{Development}{Git (standalone, Github, Bitbucket), svn, development methodologies, testing regimes, deployment best practices with CI/CD, packaging in RPM and DEB formats, containerisation, debugging tools}
+\hugeplusskip
+
+\resumeitem{Networking}{Architecture and design, capacity planning, addressing and subnetting, routing and associated protocols, high availability, debugging, performance, IPsec and OpenVPN, IPv6, firewalls}
+\hugeplusskip
+
+\resumeitem{Hardware}{I have plenty of hands-on datacentre experience and am thoroughly familiar with the realities of how systems are built in practice}
+\hugeplusskip
+
+\resumeitem{Databases}{PostgreSQL (with replication), MySQL, SQLite, Redis}
+\hugeplusskip
+
+\resumeitem{Security}{Policy, risk assessment, reporting, auditing, analysis, best practice, cryptography}
+\hugeplusskip
+
+\resumeitem{Automation}{Ansible, Puppet, automated OS installation with tools such as Kickstart and d-i, scripting with core unix utilities, etc.}
+\hugeplusskip
+
+\resumeitem{Webapps}{Common LAMP stack, nginx, WSGI, Rails via Thin/Unicorn/Passenger, Tomcat}
+\hugeplusskip
+
+\resumeitem{Scalability \& clustering}{HAproxy, Corosync and Pacemaker, DRBD}
+\hugeplusskip
+
+\resumeitem{People}{I am first and foremost a good listener. I communicate clearly and effectively in any medium, and can explain complex concepts to others regardless of their level of familiarity.}
+\hugeplusskip
+
+\end{skillz}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{resumeblock}{Education}
+Bachelor of Science (Computer Science)\newline
+University of New South Wales & 2002 -- 2006
+\end{resumeblock}
+\tinyskip
+
+
+\end{document}
