@@ -1,0 +1,71 @@
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{simplemargins}
+\usepackage{setspace}
+\usepackage{graphicx}
+\setlength{\smpagewidth}{210mm}
+\setlength{\smpageheight}{297mm}
+
+% Fiddle, will affect flow and alignment on the page, not fully understood.
+\setleftmargin{2.0cm}
+\setrightmargin{2.7cm}
+\settopmargin{2.0cm}
+\setbottommargin{0cm}
+
+% Set our fonts and spacings.
+\newfont{\myfonta}{cmr10 at 9pt}
+\newfont{\myfontb}{cmr10 at 10pt}
+\newfont{\myfontc}{cmr10 at 15pt}
+\newfont{\myfontd}{cmr10 at 12pt}
+\newcommand{\hugeplusskip}[0]{\vspace{3mm}\\}
+\newcommand{\hugeskip}[0]{\vspace{2.0mm}\\}
+\newcommand{\Largeskip}[0]{\vspace{1.6mm}\\}
+\newcommand{\largeskip}[0]{\vspace{1.2mm}\\}
+\newcommand{\shortskip}[0]{\vspace{0.8mm}\\}
+\newcommand{\tinyskip}[0]{\vspace{0.1mm}\\}
+
+% Small caps
+\newcommand{\smcp}[1]{\sc{\myfontb{#1}}}
+\renewcommand{\textsc}[1]{\smcp{#1}}
+
+
+% Select our default font.
+\newcommand{\setmainfont}[0]{\myfontb}
+
+
+% Print name and contact details at the top; fiddly.
+\newcommand{\header}[2]{%
+\hspace{-0.2cm}%
+\begin{tabular}{p{10cm}p{5.75cm}}%
+{\raggedright {\headline {#1}}%
+}%
+& %
+\raggedleft{#2}%
+\end{tabular}}
+
+\newcommand{\headline}[1]{{\myfontc{#1}}}
+
+
+% Print a nice blue section heading and full-width line.
+\newcommand{\blocktitle}[1]{
+\parbox{\textwidth}{
+	\vspace{3mm}
+	\noindent
+	\textcolor{MidnightBlue}{
+{\myfontd {#1}
+	\vspace*{2mm}
+	\hrule}
+	\vspace*{4mm}
+	\noindent
+} } }
+
+
+% Long headings and small right-side details (employment history).
+\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{tabular}{p{12cm}p{4cm}}}{\end{tabular}}
+
+% Short headings and long descriptions (bulletpoint lists).
+\newenvironment{skillz}[1]{\blocktitle{#1}\begin{tabular}{p{3.75cm}p{11.5cm}}}{\end{tabular}}
+\newcommand{\resumeitem}[2]{\noindent\raggedright{\textsc{#1}} & #2}
+
+% I have no idea what these do.
+\setlength{\parindent}{0mm}
+\pagestyle{empty}

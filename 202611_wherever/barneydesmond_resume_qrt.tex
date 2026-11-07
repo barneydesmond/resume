@@ -1,0 +1,194 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{enumitem}
+
+\include{cv-commands}
+
+\begin{document}
+
+\setmainfont
+
+\header
+{Barney Desmond}
+{+61 413 476 139 (mobile)\\
+barneydesmond@gmail.com\\
+Sydney, Australia}
+
+% Linux Production Engineer
+% https://www.qube-rt.com/careers/job?gh_jid=8393716002
+
+% Outline
+% * Infrastructure support for the on-prem Linux estate (trading and research platforms)
+% * Build, administer, upgrade and support Linux hosts
+% * Monitoring and automation initiatives
+% * Document and improve processes with engineering teams
+% * Out-of-hours work and on-call rota (typically remote)
+%
+% Bottom line: Keep things running, automate it, make it more reliable.
+
+% Requirements
+% * Linux
+% * Server lifecycle end to end
+% * Automate and homogenise everything (ansible)
+% * Python and bash scripting
+% * Server hardware
+% * Networking
+% * Problem solving, analysis
+% * Communicate results
+% * Storage knowledge advantageous
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{5mm}
+\begin{tabular}{p{12cm}p{4cm}}
+\multicolumn{2}{p{16cm}}{
+\setstretch{1.2}
+I have just under two decades of experience designing and running Linux
+systems. I love solving difficult problems, and I take a rigorous approach to
+ensure the job is done properly, and documented. My background is in managing
+full stack web apps, but my interests are much broader and I quickly pick up
+new skills as needed. I'm particularly interested in networking and automation
+right now.
+}
+\hugeskip
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{skillz}{Knowledge and experience}
+
+% QRT Linux Production Engineer, highlight these:
+% * RHEL-family, end-to-end deployments
+% * Ansible, Python and bash, monitoring and automation
+% * Server hardware, TCP/UDP, LAN/WAN
+% * NFS/SAN (advantageous)
+
+\resumeitem{Operating Systems}{Extensive Linux background, primarily Redhat family (RHEL, AlmaLinux, \mbox{Centos}, Fedora) and Debian.}
+\hugeplusskip
+
+\resumeitem{Languages}{Heavy user of Python and shell scripting, fluent in C. Past use of PHP, some Perl, and Javascript.}
+\hugeplusskip
+
+\resumeitem{Automation}{Ansible, Kickstart and d-i for automated OS installation, some Puppet, tingle for hands-off patching, scripting with core unix utilities and Makefiles.} \\
+\hugeplusskip
+
+\resumeitem{Monitoring and alerting}{Monitoring and metrics collection with Zabbix, InfluxDB and Telegraf, Grafana, and Icinga. Some Prometheus for in-cluster metrics.}
+\hugeplusskip
+
+\resumeitem{Networking}{Network architecture design and planning, subnetting, routing with BGP and OSPF, WAN connectivity, high availability, debugging, performance, Wireguard, IPsec, OpenVPN, IPv6, firewalls.}
+%\resumeitem{Networking}{In-depth knowledge covering architecture and design, capacity planning, addressing and subnetting, routing with BGP and related protocols, WAN connectivity, high availability, debugging, performance, Wireguard, IPsec, OpenVPN, IPv6, firewalls.}
+\hugeplusskip
+
+\resumeitem{Storage}{Deployed and maintained iSCSI and NFS storage, including Everpure (formerly Pure Storage) FlashArray appliances.}
+\hugeplusskip
+
+\resumeitem{Hardware}{Heavy datacentre experience with Supermicro and Dell servers, racking and cabling, diagnosing hardware issues, IPMI/iDRAC remote management.}
+\hugeplusskip
+
+\resumeitem{Containerisation}{Lots of operational experience with k8s (mostly Rancher) and raw Docker workloads. Some experience upgrading k8s clusters and their workloads, with minimal user-facing impact.}
+\hugeplusskip
+
+\resumeitem{Documentation}{A key element of maintainable systems is good documentation, starting with clear outlines and specs, and continuing with well-written procedures and explanations. I spend a lot of time writing documentation that ensures repeatable results, and speedy onboarding of new maintainers.}
+\hugeplusskip
+
+\resumeitem{Virtualisation}{Have deployed and managed VMs with KVM, Xen, and VMware, with solid knowledge of all the layers. Familiar with AWS services and corresponding APIs, including Terraform for automation.}
+\hugeplusskip
+
+\resumeitem{Development}{Daily user of Git (standalone, Github, Bitbucket), Subversion, agile methodologies, deployment best practices with CI/CD, packaging in RPM and DEB formats, containerisation, debugging with tools such as gdb.}
+\hugeplusskip
+
+\resumeitem{Databases}{Well versed in PostgreSQL and its replication features, MySQL, Redis, and ElasticSearch. I have developed my own applications against them, and understand performance and integrity concerns from both sides.}
+\hugeplusskip
+
+\resumeitem{Security}{I have a pragmatic approach to security and recognise that it is a core operational concern. I have a particular interest in cryptography, risk assessment, and policy rooted in best practices.}
+\hugeplusskip
+
+\resumeitem{People}{I am first and foremost a good listener. I communicate clearly and effectively, and can explain complex concepts to others regardless of their level of familiarity.}
+\hugeplusskip
+
+\end{skillz}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+%\newpage
+
+\begin{resumeblock}{Employment history}
+
+\textbf{Arista Networks} -- DevOps Engineer & \hspace{3mm}Jun 2019 -- Present \\
+\multicolumn{2}{p{15.6cm}}{
+\myfonta
+\begin{itemize}[topsep=-2mm,itemsep=0.3mm,parsep=1.0mm]
+% Areas to highlight
+% - Automation
+% - Networking
+% - Docker
+% - k8s
+% - iscsi w/ Pure Storage
+% - NFS
+% - Slurm job cluster
+% - Administered and maintained local instances of Atlassian tooling (Bamboo, Jira, Confluence, Bitbucket)
+% - Monitoring with InfluxDB, Zabbix, Grafana
+% - I'm on dat vibe coding with Claude and Codex
+% - Virtualisation
+%
+% Bottom line: Keep things running, integrate with HQ, make them better.
+\item Ran the production network and Linux infra for 40+ FPGA engineers in Sydney, along with the CI/CD systems they depend on, and kept it reliable through upgrades and team growth.
+\item Migrated $\sim$50 servers from end-of-life CentOS 7 to AlmaLinux 9, using a fully automated Kickstart and Ansible build process. Any host can be rebuilt from scratch on demand, making this now a mundane occurrence.
+\item Automated patching of build servers with tingle, applying updates on a rolling schedule with no user-facing impact, ensuring that systems stay current without interrupting engineers' work.
+\item Designed and built the network and server infrastructure for a greenfield site, with dark fibre links for local redundancy, and BGP peering back to HQ, so the site had resilient and secure connectivity from day one.
+\item Deployed and maintained storage on Everpure FlashArray appliances, iSCSI for k8s and NFS for shared storage. This ensured reliable and resilient storage for cluster workloads, and generous high performance capacity for engineers.
+\item Monitored everything with Zabbix, InfluxDB and Grafana to catch problems before users did, and diagnosed performance and reliability issues across network, storage and compute, owning each one through to resolution.
+\end{itemize}
+}
+
+\vspace{3mm} \\
+
+\textbf{NSW Dept. of Education} -- Enterprise Linux administrator & \hspace{3mm}Aug 2015 -- Jun 2019 \\
+\multicolumn{2}{p{15.6cm}}{
+\myfonta
+\begin{itemize}[topsep=-2mm,itemsep=0.3mm,parsep=1.0mm]
+% * Ops and uptime
+% * Designing new systems for deployments
+% * Administering and troubleshooting
+% * Maintaining DBs
+% Bottom line: Keep things running, make them better and more reliable.
+\item Built and ran a large RHEL fleet, hardened to industry best practices, with open-access Icinga dashboards for demonstrable performance. Eliminated points of failure that blocked timely patching, ensuring consistent updates across the fleet.
+% VRA API scripting with Python and Makefiles
+\item Wrote Bash and Python tools to build systems rapidly with VMware APIs, then managed them with Puppet.
+% Onboarding+departure of staff, managing accounts in LDAP for services, shift to LDIF templating for this
+\item Wrote extensive process documentation, making work repeatable, which doubled as training material for new staff.
+\end{itemize}
+}
+
+\vspace{3mm} \\
+
+\textbf{Anchor} & \\
+\hspace{5mm}R\&D Engineer & \hspace{3mm}Aug 2013 -- Aug 2015 \\
+\hspace{5mm}Technical writer & \hspace{3mm}Nov 2011 -- Aug 2013 \\
+\hspace{5mm}Senior Linux sysadmin & \hspace{3mm}Apr 2007 -- Nov 2011 \\
+\multicolumn{2}{p{15.6cm}}{
+\myfonta
+\begin{itemize}[topsep=-2mm,itemsep=0.3mm,parsep=1.0mm]
+\item Part of an internal team creating tooling and efficiency measures to support frontline sysadmins. Tools were chosen for their suitability to the task. Included Python, Ruby, and Haskell for app code, and Postgres, Redis, Elasticsearch, and Ceph for persistence.
+\item Wrote \emph{UMAD}, a knowledge search engine spanning disparate sources of information, including our wiki, support ticketing system, domain registrations, and CRM.
+\item Wrote and edited thousands of pages of internal procedures, guides, and documentation, supporting every facet of the business. Many articles written by request and on a deadline, targeted for particular audiences.
+\item Build, administration, and monitoring of RHEL and Debian servers for customers, both physical and virtual. Also developed rapid P2V processes, helping reduce operating costs.
+\item Mentored new staff, working closely to get them settled in and up to speed.
+\end{itemize}
+}
+
+\end{resumeblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{3mm}
+
+\begin{resumeblock}{Education}
+Bachelor of Science (Computer Science)\newline
+University of New South Wales & 2002 -- 2006
+\end{resumeblock}
+\tinyskip
+
+
+\end{document}
