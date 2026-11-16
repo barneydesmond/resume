@@ -6,10 +6,20 @@
 \setlength{\smpageheight}{297mm}
 
 % Fiddle, will affect flow and alignment on the page, not fully understood.
-\setleftmargin{2.0cm}
-\setrightmargin{2.7cm}
+\setleftmargin{2.2cm}
+\setrightmargin{2.2cm}
 \settopmargin{2.0cm}
 \setbottommargin{2.0cm}
+% \setbottommargin subtracts \footskip but the text area is positioned by
+% \headheight+\headsep, so with no header/footer the text can run ~0.3cm lower
+% than asked. Set the height directly so the bottom margin really is 2.0cm.
+\setlength{\textheight}{\dimexpr\smpageheight-2.0cm-2.0cm\relax}
+
+% Layout widths. The section rules and headings span the full \textwidth. Body
+% content (intro, skills, bullets, dates) is inset by \tabcolsep on both sides,
+% so left and right edges are symmetric and scale with the margins above.
+\newlength{\contentwidth}
+\AtBeginDocument{\setlength{\contentwidth}{\dimexpr\textwidth-2\tabcolsep\relax}}
 
 % Typeface: Palatino (mathpazo also gives a matching $\sim$ etc.)
 \usepackage[T1]{fontenc}
@@ -17,7 +27,7 @@
 
 % Set our fonts and spacings. Three sizes: body (also used for bullets),
 % section headings, and the name. \myfonta and \myfontb are kept as aliases.
-\newcommand{\myfontb}{\fontsize{10.5pt}{12.6pt}\selectfont}
+\newcommand{\myfontb}{\fontsize{11pt}{13.2pt}\selectfont}
 \newcommand{\myfonta}{\myfontb}
 \newcommand{\myfontd}{\fontsize{13pt}{15.6pt}\selectfont}
 \newcommand{\myfontc}{\fontsize{24pt}{28.8pt}\selectfont}
@@ -39,8 +49,7 @@
 
 % Print name and contact details at the top; fiddly.
 \newcommand{\header}[2]{%
-\hspace{-0.2cm}%
-\begin{tabular}{p{10cm}p{5.75cm}}%
+\begin{tabular}{@{}p{\dimexpr\textwidth-5.75cm-2\tabcolsep\relax}p{5.75cm}@{}}%
 {\raggedright {\headline {#1}}%
 }%
 & %
@@ -49,7 +58,7 @@
 
 % Fixed-height box: the name contributes the same row height as the old 16pt name,
 % so the layout below is unchanged. The raise value aligns the top of the name with the top of the contact block.
-\newcommand{\headline}[1]{\raisebox{-10pt}[11.6pt][0pt]{\myfontc{#1}}}
+\newcommand{\headline}[1]{\raisebox{-9.7pt}[11.6pt][0pt]{\myfontc{#1}}}
 
 
 % Print a nice blue section heading and full-width line.
@@ -70,9 +79,9 @@
 \newenvironment{resumeblock}[1]{\blocktitle{#1}\par\nopagebreak}{}
 % Plain unbreakable one-tabular entry (used for Education).
 % Entry header/row layout: title at the left, dates flush right. The table is
-% exactly as wide as the bullet lists below it (15.6cm + the 6pt \tabcolsep indent),
+% exactly as wide as the bullet lists below it (\contentwidth, indented by \tabcolsep),
 % so the right-hand edges of dates and bullet text line up.
-\newcommand{\resumetabbegin}{\begin{tabular*}{\dimexpr15.6cm+\tabcolsep\relax}{@{\hspace{\tabcolsep}}p{11.5cm}@{\extracolsep{\fill}}r@{}}}
+\newcommand{\resumetabbegin}{\begin{tabular*}{\dimexpr\textwidth-\tabcolsep\relax}{@{\hspace{\tabcolsep}}p{11.5cm}@{\extracolsep{\fill}}r@{}}}
 \newcommand{\resumetabend}{\end{tabular*}}
 \newenvironment{resumeentry}{\resumetabbegin}{\resumetabend\par}
 
@@ -85,13 +94,15 @@
   \noindent\resumetabbegin#1\resumetabend\par\nopagebreak
   \myfonta
   \begin{itemize}[leftmargin=31pt,labelindent=6pt,%
-    rightmargin=\dimexpr\textwidth-15.6cm-\tabcolsep\relax,%
+    rightmargin=\tabcolsep,%
     topsep=5.5pt,itemsep=0.3mm,parsep=1.0mm,beginpenalty=10000]%
   \interlinepenalty=10000
+  % Lets TeX stretch spaces just enough to avoid a 1pt overhang on a tight line.
+  \emergencystretch=1em
 }{\end{itemize}}
 
 % Short headings and long descriptions (bulletpoint lists).
-\newenvironment{skillz}[1]{\blocktitle{#1}\begin{tabular}{p{3.75cm}p{11.5cm}}}{\end{tabular}}
+\newenvironment{skillz}[1]{\blocktitle{#1}\begin{tabular}{p{3.75cm}p{\dimexpr\contentwidth-3.75cm-2\tabcolsep\relax}}}{\end{tabular}}
 \newcommand{\resumeitem}[2]{\noindent\raggedright{\textsc{#1}} & #2}
 
 % I have no idea what these do.
