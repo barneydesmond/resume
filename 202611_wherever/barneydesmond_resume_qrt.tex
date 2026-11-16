@@ -41,15 +41,15 @@ Sydney, Australia}
 \vspace{5mm}
 \begin{tabular}{>{\raggedright\arraybackslash}p{\contentwidth}}
 {
-\setstretch{1.2}
+% Paragraph gap: p-cells reset \parskip to 0, so it has to be set inside the cell.
+% Half a line is the conventional gap, and it scales with the font and leading.
+\setlength{\parskip}{0.5\baselineskip}
 I have just under two decades of experience designing and running Linux
 systems. I love solving difficult problems, and I take a rigorous approach to
 ensure the job is done properly, and documented. My background is in managing
 full stack web apps, but my interests are much broader and I quickly pick up
 new skills as needed. I'm particularly interested in networking and automation
 right now.
-
-\vspace{2mm}
 
 References available on request.
 }
