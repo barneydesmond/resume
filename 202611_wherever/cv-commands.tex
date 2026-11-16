@@ -9,7 +9,7 @@
 \setleftmargin{2.0cm}
 \setrightmargin{2.7cm}
 \settopmargin{2.0cm}
-\setbottommargin{0cm}
+\setbottommargin{2.0cm}
 
 % Typeface: Palatino (mathpazo also gives a matching $\sim$ etc.)
 \usepackage[T1]{fontenc}
@@ -68,8 +68,22 @@
 
 % Long headings and small right-side details (employment history).
 \newenvironment{resumeblock}[1]{\blocktitle{#1}\par\nopagebreak}{}
-% One unbreakable tabular per entry, so page breaks can fall between entries.
-\newenvironment{resumejob}{\begin{tabular}{p{12cm}p{4cm}}}{\end{tabular}\par}
+% Plain unbreakable one-tabular entry (used for Education).
+\newenvironment{resumeentry}{\begin{tabular}{p{12cm}p{4cm}}}{\end{tabular}\par}
+
+% Employment entry: #1 holds the header rows (title and dates), set in a small
+% tabular that is kept with the first bullet. The bullets that follow are a
+% normal list, so a page break may fall between bullets, but never inside one
+% (\interlinepenalty=10000 forbids breaking between lines of a bullet).
+% leftmargin/rightmargin reproduce the old in-tabular-cell indentation.
+\newenvironment{resumejob}[1]{%
+  \noindent\begin{tabular}{p{12cm}p{4cm}}#1\end{tabular}\par\nopagebreak
+  \myfonta
+  \begin{itemize}[leftmargin=31pt,labelindent=6pt,%
+    rightmargin=\dimexpr\textwidth-15.6cm-\tabcolsep\relax,%
+    topsep=5.5pt,itemsep=0.3mm,parsep=1.0mm,beginpenalty=10000]%
+  \interlinepenalty=10000
+}{\end{itemize}}
 
 % Short headings and long descriptions (bulletpoint lists).
 \newenvironment{skillz}[1]{\blocktitle{#1}\begin{tabular}{p{3.75cm}p{11.5cm}}}{\end{tabular}}
