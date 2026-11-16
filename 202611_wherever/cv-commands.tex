@@ -1,6 +1,7 @@
 \usepackage[dvipsnames,usenames]{color}
 \usepackage{simplemargins}
 \usepackage{setspace}
+\usepackage{array} % for >{\raggedright\arraybackslash} columns
 \usepackage{graphicx}
 \setlength{\smpagewidth}{210mm}
 \setlength{\smpageheight}{297mm}
@@ -97,12 +98,11 @@
     rightmargin=\tabcolsep,%
     topsep=5.5pt,itemsep=0.3mm,parsep=1.0mm,beginpenalty=10000]%
   \interlinepenalty=10000
-  % Lets TeX stretch spaces just enough to avoid a 1pt overhang on a tight line.
-  \emergencystretch=1em
+  \raggedright
 }{\end{itemize}}
 
 % Short headings and long descriptions (bulletpoint lists).
-\newenvironment{skillz}[1]{\blocktitle{#1}\begin{tabular}{p{3.75cm}p{\dimexpr\contentwidth-3.75cm-2\tabcolsep\relax}}}{\end{tabular}}
+\newenvironment{skillz}[1]{\blocktitle{#1}\begin{tabular}{p{3.75cm}>{\raggedright\arraybackslash}p{\dimexpr\contentwidth-3.75cm-2\tabcolsep\relax}}}{\end{tabular}}
 \newcommand{\resumeitem}[2]{\noindent\raggedright{\textsc{#1}} & #2}
 
 % I have no idea what these do.
