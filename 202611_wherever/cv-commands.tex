@@ -11,21 +11,26 @@
 \settopmargin{2.0cm}
 \setbottommargin{0cm}
 
-% Set our fonts and spacings.
-\newfont{\myfonta}{cmr10 at 9pt}
-\newfont{\myfontb}{cmr10 at 10pt}
-\newfont{\myfontc}{cmr10 at 15pt}
-\newfont{\myfontd}{cmr10 at 12pt}
-\newcommand{\hugeplusskip}[0]{\vspace{3mm}\\}
-\newcommand{\hugeskip}[0]{\vspace{2.0mm}\\}
-\newcommand{\Largeskip}[0]{\vspace{1.6mm}\\}
-\newcommand{\largeskip}[0]{\vspace{1.2mm}\\}
-\newcommand{\shortskip}[0]{\vspace{0.8mm}\\}
-\newcommand{\tinyskip}[0]{\vspace{0.1mm}\\}
+% Typeface: Palatino (mathpazo also gives a matching $\sim$ etc.)
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
 
-% Small caps
-\newcommand{\smcp}[1]{\sc{\myfontb{#1}}}
-\renewcommand{\textsc}[1]{\smcp{#1}}
+% Set our fonts and spacings. Three sizes: body (also used for bullets),
+% section headings, and the name. \myfonta and \myfontb are kept as aliases.
+\newcommand{\myfontb}{\fontsize{10.5pt}{12.6pt}\selectfont}
+\newcommand{\myfonta}{\myfontb}
+\newcommand{\myfontd}{\fontsize{13pt}{15.6pt}\selectfont}
+\newcommand{\myfontc}{\fontsize{24pt}{28.8pt}\selectfont}
+% \unskip drops the space before the macro; otherwise a nearly-full last line
+% in a cell can wrap that space onto a spurious extra line.
+\newcommand{\hugeplusskip}[0]{\unskip\vspace{3mm}\\}
+\newcommand{\hugeskip}[0]{\unskip\vspace{2.0mm}\\}
+\newcommand{\Largeskip}[0]{\unskip\vspace{1.6mm}\\}
+\newcommand{\largeskip}[0]{\unskip\vspace{1.2mm}\\}
+\newcommand{\shortskip}[0]{\unskip\vspace{0.8mm}\\}
+\newcommand{\tinyskip}[0]{\unskip\vspace{0.1mm}\\}
+
+% Small caps: use the real small-caps shape of the typeface (\textsc is built in).
 
 
 % Select our default font.
@@ -42,7 +47,9 @@
 \raggedleft{#2}%
 \end{tabular}}
 
-\newcommand{\headline}[1]{{\myfontc{#1}}}
+% Fixed-height box: the name contributes the same row height as the old 16pt name,
+% so the layout below is unchanged. The raise value aligns the top of the name with the top of the contact block.
+\newcommand{\headline}[1]{\raisebox{-10pt}[11.6pt][0pt]{\myfontc{#1}}}
 
 
 % Print a nice blue section heading and full-width line.
@@ -60,7 +67,9 @@
 
 
 % Long headings and small right-side details (employment history).
-\newenvironment{resumeblock}[1]{\blocktitle{#1}\begin{tabular}{p{12cm}p{4cm}}}{\end{tabular}}
+\newenvironment{resumeblock}[1]{\blocktitle{#1}\par\nopagebreak}{}
+% One unbreakable tabular per entry, so page breaks can fall between entries.
+\newenvironment{resumejob}{\begin{tabular}{p{12cm}p{4cm}}}{\end{tabular}\par}
 
 % Short headings and long descriptions (bulletpoint lists).
 \newenvironment{skillz}[1]{\blocktitle{#1}\begin{tabular}{p{3.75cm}p{11.5cm}}}{\end{tabular}}
