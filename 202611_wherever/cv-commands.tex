@@ -69,7 +69,12 @@
 % Long headings and small right-side details (employment history).
 \newenvironment{resumeblock}[1]{\blocktitle{#1}\par\nopagebreak}{}
 % Plain unbreakable one-tabular entry (used for Education).
-\newenvironment{resumeentry}{\begin{tabular}{p{12cm}p{4cm}}}{\end{tabular}\par}
+% Entry header/row layout: title at the left, dates flush right. The table is
+% exactly as wide as the bullet lists below it (15.6cm + the 6pt \tabcolsep indent),
+% so the right-hand edges of dates and bullet text line up.
+\newcommand{\resumetabbegin}{\begin{tabular*}{\dimexpr15.6cm+\tabcolsep\relax}{@{\hspace{\tabcolsep}}p{11.5cm}@{\extracolsep{\fill}}r@{}}}
+\newcommand{\resumetabend}{\end{tabular*}}
+\newenvironment{resumeentry}{\resumetabbegin}{\resumetabend\par}
 
 % Employment entry: #1 holds the header rows (title and dates), set in a small
 % tabular that is kept with the first bullet. The bullets that follow are a
@@ -77,7 +82,7 @@
 % (\interlinepenalty=10000 forbids breaking between lines of a bullet).
 % leftmargin/rightmargin reproduce the old in-tabular-cell indentation.
 \newenvironment{resumejob}[1]{%
-  \noindent\begin{tabular}{p{12cm}p{4cm}}#1\end{tabular}\par\nopagebreak
+  \noindent\resumetabbegin#1\resumetabend\par\nopagebreak
   \myfonta
   \begin{itemize}[leftmargin=31pt,labelindent=6pt,%
     rightmargin=\dimexpr\textwidth-15.6cm-\tabcolsep\relax,%
