@@ -3,8 +3,8 @@ TARGETS = barneydesmond_resume_qrt.pdf
 all: $(TARGETS)
 
 %.pdf: %.tex cv-commands.tex
-	pdflatex $<
-	pdflatex $<
+	xelatex $<
+	xelatex $<
 
 clean:
 	rm -f *.log *.aux *.pdf *.ps *.dvi *.out
