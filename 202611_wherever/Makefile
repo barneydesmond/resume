@@ -1,4 +1,4 @@
-TARGETS = barneydesmond_resume_qrt.pdf
+TARGETS = barneydesmond_resume_qrt.pdf barneydesmond_resume_mitti.pdf
 
 all: $(TARGETS)
 
