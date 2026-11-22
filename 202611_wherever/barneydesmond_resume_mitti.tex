@@ -15,7 +15,7 @@ Sydney, Australia}
 
 % Senior Infrastructure Engineer, Mitti
 % https://jobs.ashbyhq.com/mitti/1792b6c6-535c-4e9b-9f74-594d7939ee06
-%
+
 % Outline
 % * Greenfield hybrid network: colo, multi-homed BGP edge, EVPN/VXLAN/ECMP fabric, AWS/GCP connectivity
 % * Automation of network and hardware ops as code
@@ -32,13 +32,14 @@ Sydney, Australia}
 % Paragraph gap: p-cells reset \parskip to 0, so it has to be set inside the cell.
 % Half a line is the conventional gap, and it scales with the font and leading.
 \setlength{\parskip}{0.5\baselineskip}
-I have just under two decades of experience designing and running Linux
-systems and networks, most recently building and running a routed Arista
-network, from greenfield site design through to BGP peering. I like building
-things from scratch, and documenting them so others can run them. I'm
-deepening my networking skills with my own network on dn42.
+I have just under two decades of experience designing and running Linux systems
+and networks, most recently building out a greenfield site at Arista, from
+design through to BGP peering. I like building things from scratch, and
+documenting them so others can run them.
 
-References available on request.
+I'm currently expanding my networking skillset with my own AS on dn42: OSPF
+internally, eBGP over WireGuard with 6--7 peers, IPv6 endpoints, prefix
+filtering, and communities.
 }
 \hugeskip
 \end{tabular}
@@ -52,17 +53,18 @@ References available on request.
 % * Automation, hardware, AI tooling
 % * Do not claim EVPN/VXLAN, carrier BGP or cloud networking until they are real
 
-\resumeitem{Networking}{Designed and ran routed Arista (EOS) networks: core and top-of-rack with eBGP, WAN and dark fibre links, high availability, addressing and subnetting, capacity planning, IPv6. Packet-level debugging with tcpdump and Wireshark. WireGuard, IPsec and OpenVPN, firewalls. Kubernetes networking with Canal, MetalLB and nginx ingress on bare metal. Own AS on dn42, peering over WireGuard.}
+%\resumeitem{Networking}{Designed and built multi-site routed networks on Arista (EOS): core and top-of-rack with eBGP, WAN and dark fibre links, high availability, addressing and subnetting, capacity planning, IPv6. Packet-level debugging with tcpdump and Wireshark. WireGuard, IPsec and OpenVPN, firewalls. Kubernetes networking with Canal, MetalLB and nginx ingress on bare metal. Own AS on dn42, peering over WireGuard.}
+\resumeitem{Networking}{Design and planning, addressing, BGP, OSPF, Arista EOS, MikroTik RouterOS, WAN connectivity, HA, WireGuard VPN, IPsec, OpenVPN, IPv6, firewalling, Wireshark/tcpdump}
 \hugeplusskip
 
-\resumeitem{Linux}{RHEL, AlmaLinux, Centos, Debian/Ubuntu, RPM/DEB packaging}
+\resumeitem{Linux}{RHEL, AlmaLinux, CentOS, Debian/Ubuntu, RPM/DEB packaging}
 \hugeplusskip
 
-\resumeitem{Coding}{Python, bash/shell, C, PHP, Perl, Javascript, gdb for debugging}
+\resumeitem{Coding}{Python, bash/shell, C, PHP, Perl, JavaScript, gdb for debugging}
 \hugeplusskip
 
 % Tidy this up, keep it more relevant to networking
-\resumeitem{Automation}{Ansible, Kickstart, d-i, CVaaS templating for Arista EOS, Puppet, tingle, Make and shell tooling, AI tooling for diagnosis and automation}
+\resumeitem{Automation}{Ansible, Kickstart, CVaaS templating for Arista EOS, Claude/Codex for diagnosis and automation, Puppet, Make and shell tooling}
 \hugeplusskip
 
 \resumeitem{Monitoring}{Zabbix, InfluxDB, Telegraf, Grafana, Icinga, Prometheus}
@@ -74,10 +76,10 @@ References available on request.
 \resumeitem{Datacentre}{Supermicro, Dell, IPMI/iDRAC, racking \& cabling, hardware issues}
 \hugeplusskip
 
-\resumeitem{Containers \& Virt}{k8s, Rancher, Docker, Helm, KVM, Xen, VMware}
+\resumeitem{Containers \& Virt}{Kubernetes (Rancher, bare metal), Canal CNI, MetalLB, nginx ingress, Docker, Helm, KVM, Xen, VMware}
 \hugeplusskip
 
-\resumeitem{Documentation}{A key element of maintainable systems is good documentation, starting with clear outlines and specs, and continuing with well-written procedures and explanations. I spend a lot of time writing documentation that ensures repeatable results, and speedy onboarding of new maintainers.}
+\resumeitem{Documentation}{Well defined specs and goals, rigorous notetaking for experiments, clear and reliable procedures, explanatory diagrams}
 \hugeplusskip
 
 \resumeitem{Security}{Interest in cryptography, risk assessment, physical security}
@@ -104,16 +106,16 @@ References available on request.
 % - Hardware provisioning
 %
 % Bottom line: Build shiny new thing, keep it running, automate it.
-\item Designed and built the network for a new 5-rack site: Arista core and top-of-rack switches running eBGP, subnets sized per rack to keep broadcast domains small, and a dark fibre link to the datacentre with BGP peering, giving redundant paths if either site's internet connection fails. The site was working on day one for 50+ staff moving in.
-\item Ran the production network and Linux infra for 40+ FPGA engineers in Sydney, along with the CI/CD systems they depend on, and kept it reliable through upgrades and team growth.
+\item Designed and built the network for a new 5-rack site: Arista core and top-of-rack switches running eBGP to multiple upstreams, subnets sized per rack to keep broadcast domains small, and a dark fibre link to our racks at Equinix SY4 with BGP peering, giving redundant paths if either site's internet connection fails. The site was working on day 1 for 50+ staff moving in.
+\item Ran the production network and bare metal k8s cluster for 40+ FPGA engineers in Sydney, along with the Bamboo CI/CD systems they depend on, and kept it reliable through upgrades and team growth.
 \item Migrated $\sim$50 servers from end-of-life CentOS 7 to AlmaLinux 9, using a fully automated Kickstart and Ansible build process. Any host can be rebuilt from scratch on demand, making this now a mundane occurrence.
-\item Automated patching of build servers with tingle, applying updates on a rolling schedule with no user-facing impact, ensuring that systems stay current without interrupting engineers' work.
+\item Fully automated patching of build servers, applying updates on a rolling schedule with no user-facing impact, ensuring that systems stay current and secure without interrupting engineers' work.
 \item Deployed and maintained storage on Everpure FlashArray appliances, iSCSI for k8s and NFS for shared storage. This ensured reliable and resilient storage for cluster workloads, and generous high performance capacity for engineers.
 \item Monitored everything with Zabbix, InfluxDB and Grafana to catch problems before users did, and diagnosed performance and reliability issues across network, storage and compute, owning each one through to resolution.
 \item Performed post-acquisition capacity planning and upgrades for compute and storage infra, ensuring long-term stability and room to grow as demands increased.
-\item Led the ongoing migration and integration of infrastructure in Sydney to align with the HQ EngProd team.
-\item Participated in comprehensive security initiatives to discover, assess, and remedy vulnerabilities in our infrastructure.
-\item Used AI tooling to collect and correlate data across Slurm cluster nodes to find failure patterns, and to automate routine patching and reboots.
+%\item Led the ongoing migration and integration of infrastructure in Sydney to align with the HQ EngProd team.
+\item Used AI tooling to collect and correlate data across Slurm cluster nodes to find failure patterns, and to automate routine patching and reboots. Wrote skills to speed up diagnosis of correlated build-pipeline and k8s failures.
+%\item Participated in comprehensive security initiatives to discover, assess, and remedy vulnerabilities in our infrastructure.
 \end{resumejob}
 \vspace{3mm}
 
